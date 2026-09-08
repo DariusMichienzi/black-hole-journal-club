@@ -68,7 +68,7 @@ if __name__ == "__main__":
     random.seed(42 + 11)
     rota = assemble_rota(
         members,
-        datetime.date(2025, 9, 30),
+        datetime.date(2026, 9, 15),
         len(members) - len(exclude_from_rota),
         exclude=exclude_from_rota,
     )
