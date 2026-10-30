@@ -19,7 +19,6 @@ To generate additional entries for the rota, use `scripts/rota.py`.
 
 | Date       | Presenter   | Room |
 |------------|-------------|------|       
-| 2026-10-27 | Tom H       | 3.30 |
 | 2026-11-03 | Jiachen     | *online only* |
 | 2026-11-10 | Teresa      | 3.30 |
 | 2026-11-17 | Yimin       | 3.30 |
@@ -38,11 +37,30 @@ $^*$ Registration Only
 
 ## Minutes
 
+### 2026-10-27 Tom H
+
+Discussed Papers:
+
+[The biases caused by interpolated table models and their impact on X-ray spectroscopy](https://arxiv.org/abs/2610.35174) (Lucchini et al., 10-2026)
+
+- The paper looks at how the linear interpolation of pre-computed table models (e.g. relxill/xillver, kerrbb, apec) during spectral fitting can bias parameter inference in X-ray spectroscopy.
+- Interpolation errors vanish only at the grid points, so they can bias the posterior, make it artificially bi- or multimodal with peaks tied to the grid points, and break gradient-based fitting.
+- Applied to NuSTAR data of MAXI J1820+070, the spin posterior peaks at each spin grid point, and in the hard state the $\Gamma$ posterior splits in two at a xillver grid point. This severely slows sampler convergence and needs non-standard nested sampling settings to recover.
+- This may partly explain inconsistent reflection results in the literature. They recommend much longer chains ($\gtrsim 50\tau$), checks against on-the-fly models, avoiding gradient-based methods with table models, and better interpolation schemes in the future.
+
+Presented Paper: [Chandra X-ray imaging and IC/CMB model for the inner jet of PKS 0637−752](https://arxiv.org/abs/2609.06587) (Maithil et al., 09-2026)
+
+- PKS 0637−752 is a historic Chandra source. It was the first Chandra target and the first X-ray jet detection, the first jet explained by inverse Compton scattering of the CMB (IC/CMB), and the first where Fermi upper limits ruled out beamed IC/CMB in parts of the jet.
+- The paper revisits it because the inner jet (3.4–7 arcsec from the core) had never been modelled in detail with IC/CMB. They combine archival 1999 and new Cycle 18 Chandra data with ATCA radio, ALMA mm/sub-mm, HST/IR and Fermi upper limits, and also report new X-ray detections of the receding jet.
+- The model is a single-zone IC/CMB model, where the radio-emitting electrons up-scatter CMB photons to X-rays, used to constrain the viewing angle and bulk Lorentz factor. Three cases with different high-energy electron cutoffs are tested. Case I ($\gamma_{\rm max} = 2.5 \times 10^4$) needs an extra population for the ALMA flux. Case II ($\gamma_{\rm max} = 5 \times 10^4$) violates the Fermi limits. Case III fits ALMA and Fermi, but only ~22% of the X-ray flux is IC/CMB.
+- Case III is preferred. The X-ray slope ($\alpha_X = 0.92$) is steeper than the radio slope ($\alpha_R = 0.56$), the HST/NICMOS flux lies above the model spectrum, and only Case III falls below the cold-lepton power limit of Mehta et al. (2009). All of these point to a second electron population.
+- No single electron population can explain both the radio and X-rays without violating the ALMA or Fermi data, so the inner-jet X-rays are likely a mix of synchrotron and IC/CMB. The inner jet favours small viewing angles and mildly to highly relativistic bulk motion on kpc scales.
+
 ### 2026-10-20 Thomas B
 
 Discussed Papers:
 
-[Mapping the Contracting Corona in GS 1354-64 with Insight-HXMT and XRISM: Evolving X-ray Lags and Quenched Reflection across a Complete State Transition](https://arxiv.org/abs/2610.15569)
+[Mapping the Contracting Corona in GS 1354-64 with Insight-HXMT and XRISM: Evolving X-ray Lags and Quenched Reflection across a Complete State Transition](https://arxiv.org/abs/2610.15569) (Chatterjee et al., 10-2026)
 
 - The paper looks at the 2025-26 outburst of the BH transient GS 1354-64, using near-simultaneous XRISM and Insight-HXMT observations to follow how the inner accretion geometry evolves across a complete state transition.
 - In the early hard-intermediate state the spectrum is dominated by a hot Comptonising corona with relativistically broadened reflection. As the outburst progresses, the corona cools, the photon index steepens ($\Gamma \gtrsim 2.5$) and the reflection, including the broad Fe K$\alpha$ line, is quenched, leaving a featureless disk-dominated continuum.
@@ -50,7 +68,7 @@ Discussed Papers:
 - Once the uncertainties are included, the lags show no significant monotonic correlation with the QPO frequency, photon index or fractional rms. The scatter suggests a competition between positive Comptonisation delays and negative thermal reverberation.
 - The spectral softening and QPO acceleration indicate a contracting corona, whether interpreted through Lense-Thirring precession or the TCAF paradigm. The timing properties, however, suggest a turbulent and inhomogeneous inner flow as the advancing Keplerian disk drives the source into the soft state.
 
-[Delving into the depths of NGC 3783 with XRISM VI. Evidence for a failed wind based on Fe xxv absorption line variability](https://arxiv.org/abs/2610.18429)
+[Delving into the depths of NGC 3783 with XRISM VI. Evidence for a failed wind based on Fe xxv absorption line variability](https://arxiv.org/abs/2610.18429) (Chen et al., 10-2026)
 
 - The paper looks at the variability of the prominent Fe XXV absorption trough in NGC 3783, using the continuous 10-day XRISM/Resolve observation. The absorption profile is split into five velocity intervals and their equivalent widths are measured in 19 time-resolved spectra.
 - Three of the velocity intervals show significant EW variability, and two of them respond differently to the low- and high-flux states. Time-dependent photoionisation modelling cannot reproduce the strongest variation, possibly because of uncertainties in the assumed initial equilibrium state, which prevent a precise density measurement.
@@ -58,7 +76,7 @@ Discussed Papers:
 - The high-velocity component shows a positive response with a longer lag to the ionising continuum, implying a lower ionisation parameter and density, with a distance upper limit of 0.25 pc.
 - The low-velocity component is consistent with a failed wind. Its outflow velocity is below the local escape velocity, while the high-velocity component lies near the escape threshold. Together with the lower-ionisation failed wind detected in 2001, this supports a multiphase failed-wind scenario in the unobscured state of NGC 3783 over more than two decades.
 
-Presented Paper: [Exploring the observed properties of JWST Little Red Dots with cosmological simulations and dust radiative transfer](https://arxiv.org/abs/2609.34903)
+Presented Paper: [Exploring the observed properties of JWST Little Red Dots with cosmological simulations and dust radiative transfer](https://arxiv.org/abs/2609.34903) (Chandna et al., 09-2026)
 
 - The paper looks at the nature of JWST Little Red Dots (LRDs), compact $z \geq 4$ sources with a V-shaped continuum that show broad-line AGN signatures alongside weak X-ray and mid-IR emission. They test which LRD properties emerge naturally in simulations of massive AGN host galaxies and which need additional physics.
 - They post-process two cosmological zoom-in simulations of the same massive halo at $z = 6$–9, one with BH growth and AGN feedback (AGNfid) and one with only star formation and stellar feedback (SFonly). Using SKIRT, they build a forward-modelling framework exploring different dust models, dust-to-metal ratios and intrinsic AGN spectra, and apply the JWST LRD selection criteria to the mock spectra and images.
